@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 25px;
+    width: 100%;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    margin: 35px;
+    height: 30px;
+}
+
+form input {
+    font-size: 20px;
+    border: none;
+}
+
+form button {
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+button#adicionar-tarefa {
+    background-color: green;
+}
+
+button#cancelar-tarefa {
+    background-color: red;
+}
+
+input,
+button {
+    margin-left: 8px;
+}
+
+.concluido {
+    text-decoration: line-through;
+}
+
+ul li {
+    list-style: none;
+    font-size: 20px;
+
+}
+
+li {
+    padding: 10px;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 45%;
+    font-size: 30px;
+}
