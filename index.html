@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="lip/bootstrap.min.css">
+    <style>
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        img{
+            margin-top: 24px;
+            width: 33%;
+        }
+
+        .container .animais {
+            max-width: 1024px;
+            display: grid;
+            grid-template-columns: repeat(3, 20%);
+        }
+
+        div.row { 
+            margin-top: 24px;
+        }
+
+        div.card-body img {
+            padding: none;
+            width: 100%;
+        }
+
+        a.btn.btn-primary {
+            margin: 0;
+            padding: 0;
+            text-align: end;
+        }
+
+        @media screen and (max-width: 767px) {
+            .container .animais {
+                grid-template-columns: repeat(1, 100%);
+            }
+            
+            img {
+                margin-top: 24px;
+                width: 100%;
+            }
+            
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+            .container .animais {
+                grid-template-columns: repeat(2, 49%);
+            }
+
+            img {
+                margin-top: 24px;
+                width: 48%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <h1>Imagens da Natureza</h1>
+        <div id = "carousel-images" class="carousel carousel-fade slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="3000" class=" carousel-item active">
+                    <img src="images/Floresta.jpg" class="d-block w-100">
+                    <div class="carousel-caption"></div>
+                </div>
+                <div data-bs-interval="3000" class=" carousel-item">
+                    <img src="images/Mar.jpg" class="d-block w-100">
+                    <div class="carousel-caption"></div>
+                </div>
+                <div data-bs-interval="3000" class=" carousel-item">
+                    <img src="images/Céu.jpg" class="d-block w-100">
+                    <div class="carousel-caption"></div>
+                </div>
+            </div>
+            <button data-bs-target="#carousel-images" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-target="#carousel-images" data-bs-slide="prev" class="carousel-control-next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-images" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carousel-images" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-images" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+    <div class="container animais">
+        <img src="./images/Leão.jpg">
+        <img src="./images/Urso Polar.webp">
+        <img src="./images/Águia.webp">
+            <div class="row">
+                <div class="col-4">
+                    <article class="card">
+                        <header class="card-header">
+                            Montanhas e o Lago
+                        </header>
+                        <div class="card-body">
+                            <img src="https://cdn.pixabay.com/photo/2021/10/11/18/58/lake-6701636_1280.jpg">
+                        </div>
+                        <div class="footer">
+                            <a href="#" class="btn btn-primary">Botão Link</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+    </div>        
+    <script src="lip/bootstrap.bundle.min.js"></script>
+</body>
+</html>
